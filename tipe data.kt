@@ -1,3 +1,5 @@
+import kotlin.enums.enumEntries
+
 fun main(){
     //integer (bilangan bulat)//
 
@@ -16,6 +18,7 @@ fun main(){
     var byte : Byte =  number.toByte()
     var int : Int = number.toInt()
     var float : Float = number.toFloat()
+    var double : Double = number.toDouble()
     print(float)
 
 
