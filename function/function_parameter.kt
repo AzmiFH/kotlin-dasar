@@ -12,5 +12,5 @@ fun sayHello(nama : String){
 
 fun hitungLuasPersegiPanjang(panjang : Int,lebar : Int){
     val hasil = panjang * lebar
-    println("hasil dari hitung luas persegi panjang $panjang dan $lebar adalah : $hasil")
+    println("hasill dari hitung luas persegi panjang $panjang dan $lebar adalah : $hasil")
 }
