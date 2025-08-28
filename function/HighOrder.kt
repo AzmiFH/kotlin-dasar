@@ -7,6 +7,7 @@ fun main(){
     val lambdaUpper ={value : String -> value.toUpperCase()}
     println(hello("azmi",lambdaUpper))
 }
+//pppp
 
 
 
