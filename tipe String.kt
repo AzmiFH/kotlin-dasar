@@ -13,6 +13,28 @@ fun main(){
 
     var fullname = nama+""+nama2
 
+    // Tugas 1: Kartu Pelajar Digital
+    // Buat variabel-variabel berikut menggunakan `val`:
+    // - namaLengkap (String)
+    // - umur (Int)
+    // - kotaAsal (String)
+    // - statusMahasiswa (Boolean, isi dengan `true`)
+    //
+    // Cetak semua informasi tersebut ke konsol dalam satu kalimat perkenalan
+    // yang rapi menggunakan String Template.
+    // Contoh output: "Halo, nama saya Budi Sudarsono, umur 20 tahun dari Tasikmalaya. Status mahasiswa: true"
+
+    // TULIS KODE TUGAS 1 DI SINI
+    var namaLengkap = "rambo sudarsono"
+    var umur = 22
+    var kotaAsal = "Bekasi"
+    var statuMahasiswa = true
+
+
+    println("Halo, nama saya $namaLengkap $umur\n")
+
+
+
     //string template dengan tanda dollar
     //println("$nama$nama2 haq")
 /*Tentu, ini dia catatan ringkasnya.
