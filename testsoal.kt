@@ -1,62 +1,78 @@
-const val NAMA_SEKOLAH = "SEKOLAH_KUCING"
 fun main() {
-    // Soal 1: Daftar Belanja (Fokus: Membuat & Mengubah Array)
-    // 1. Buat sebuah array bernama `daftarBelanja` menggunakan `val`.
-    //    Isi array tersebut dengan tiga item belanjaan (String): "Apel", "Sabun", "Roti".
-    // 2. Cetak ke konsol item belanjaan pertama (indeks ke-0).
-    // 3. Ternyata Anda salah tulis, ganti item kedua ("Sabun") menjadi "Shampo".
-    // 4. Cetak ke konsol item belanjaan kedua setelah diubah untuk memastikan sudah benar.
+    // Soal 1: Cek Kelulusan (Fokus: if-else sederhana)
+    // 1. Buat sebuah variabel `nilaiUjian` dengan tipe data Int dan beri nilai 80.
+    // 2. Buat sebuah if-else expression:
+    //    - JIKA `nilaiUjian` lebih besar dari 75, cetak "Selamat, Anda Lulus!".
+    //    - SELAIN ITU, cetak "Maaf, Anda harus coba lagi tahun depan.".
+    // 3. Coba ubah-ubah nilai `nilaiUjian` (misal jadi 60) dan jalankan lagi untuk melihat hasilnya.
 
     // TULIS KODE SOAL 1 DI SINI
+    var  nilaiUjian1 = 80
+    if(nilaiUjian1 > 75){
+        println("Selamat,anda Lulus")
+    }else{
+        println("Maaf,anda harus mencoba lagi tahun depan")
+    }
+    var nilaiUJian2 = 60
+    if(nilaiUJian2 > 75){
+        println("Selamat,anda Lulus")
+    }else{
+        println("Maaf,anda harus mencoba lagi tahun depan")
+    }
 
-    val daftarBelanja : Array<String> = arrayOf("Apel","Sabun","Roti")
-    daftarBelanja.set(1,"Shampo")
+
+    println("\n--- Batas Soal ---\n")
 
 
-    println("\n${daftarBelanja[0]}\n")
-
-
-    // Soal 2: Jadwal Piket (Fokus: Nullable Array & Properti .size)
-    // 1. Bayangkan ada 5 hari kerja (Senin-Jumat). Buatlah sebuah array nullable
-    //    bernama `jadwalPiket` dengan ukuran 5 untuk menampung nama-nama (String)
-    //    yang piket, karena mungkin ada hari yang kosong. Gunakan `arrayOfNulls()`.
-    // 2. Isi jadwal untuk hari Senin (indeks 0) dengan nama "Budi" dan
-    //    hari Jumat (indeks 4) dengan nama "Dewi".
-    // 3. Cetak jumlah hari kerja menggunakan properti `.size` dari array tersebut.
-    // 4. Cetak nama yang piket di hari Jumat.
+    // Soal 2: Kategori SIM (Fokus: if-else if-else)
+    // Di Indonesia, ada beberapa kategori SIM berdasarkan usia:
+    // - SIM A/C: minimal 17 tahun
+    // - SIM B1: minimal 20 tahun
+    // - SIM B2: minimal 21 tahun
+    //
+    // 1. Buat sebuah variabel `usia` dengan tipe data Int dan beri nilai 19.
+    // 2. Buat if-else if-else expression untuk menentukan SIM yang bisa dibuat:
+    //    - JIKA `usia` lebih besar atau sama dengan 21, cetak "Anda bisa membuat SIM A/C, B1, dan B2.".
+    //    - JIKA `usia` lebih besar atau sama dengan 20, cetak "Anda bisa membuat SIM A/C dan B1.".
+    //    - JIKA `usia` lebih besar atau sama dengan 17, cetak "Anda hanya bisa membuat SIM A/C.".
+    //    - SELAIN ITU, cetak "Maaf, Anda belum cukup umur untuk membuat SIM.".
 
     // TULIS KODE SOAL 2 DI SINI
+    var usia = 19
+    if (usia >= 21){
+        println("Anda bisa membuat SIM A/C, B1, dan B2.")
+    }else if (usia >= 20) {
+        println("Anda bisa membuat SIM A/C dan B1.")
+    }else if (usia >= 17){
+        println("Anda hanya bisa membuat SIM A/C.")
+    }else {
+        println("Maaf, Anda belum cukup umur untuk membuat SIM.")
+    }
 
-    val jadwalPiket : Array<String?> = arrayOfNulls<String?>(5)
-    jadwalPiket[0] = "Budi"
-    jadwalPiket[1] = "Selasa"
-    jadwalPiket[2] = "Rabu"
-    jadwalPiket[3] = "Kamis"
-    jadwalPiket[4] = "Dewi"
-    var jumlah = jadwalPiket.size
 
-    println("\njumlah hari kerja : $jumlah\n")
-    println("\nnama piket hari jumat : ${jadwalPiket[4]}\n")
+    println("\n--- Batas Soal ---\n")
 
 
-    // Soal 3: Kartu Ucapan Kelulusan (Soal Gabungan)
-    // 1. Di LUAR fungsi main, buat sebuah konstanta `NAMA_SEKOLAH` berisi nama sekolah fiktif.
-    // 2. Di DALAM fungsi main, buat sebuah array `namaLulusan` berisi 3 nama teman Anda.
-    // 3. Buat variabel `tahunAngkatan` berisi tahun kelulusan (misal: 2024).
-    // 4. Cetak kartu ucapan untuk setiap lulusan dengan format:
-    //    "Selamat kepada [Nama], angkatan 2024 dari [Nama Sekolah]!"
-    //    Gunakan String Template untuk formatnya.
-    //    (TIPS: Cetak satu per satu untuk setiap nama di dalam array menggunakan indeksnya).
+    // Soal 3: Simulasi Diskon Belanja (Soal Gabungan)
+    // 1. Buat sebuah array `daftarBelanjaan` berisi 3 harga barang (Int), contoh: arrayOf(50000, 120000, 85000).
+    // 2. Hitung total belanja dari semua barang di array tersebut menggunakan operator matematika.
+    // 3. Buat sebuah variabel `adalahMember` dengan tipe Boolean, set nilainya ke `true`.
+    // 4. Buat logika if-else:
+    //    - JIKA `adalahMember` bernilai `true` DAN `totalBelanja` lebih dari 100000,
+    //      maka berikan diskon 20000. Cetak total belanja awal dan total setelah diskon.
+    //    - SELAIN ITU, tidak ada diskon. Cetak hanya total belanja awal.
+    //    Gunakan String Template untuk mencetak output yang informatif.
 
     // TULIS KODE SOAL 3 DI SINI
-    val namaLulusan : Array<String> = arrayOf("sumbul","ranggo","kara")
-    var tahunAngkatan = 2024
 
-    println("Selamat kepada ${namaLulusan[0]}, angkatan $tahunAngkatan dari $NAMA_SEKOLAH!")
-    println("Selamat kepada ${namaLulusan[1]}, angkatan $tahunAngkatan dari $NAMA_SEKOLAH!")
-    println("Selamat kepada ${namaLulusan[2]}, angkatan $tahunAngkatan dari $NAMA_SEKOLAH!")
+    val daftarbelanjaan : Array<Int> = arrayOf(50000,12000,85000)
+    var totalBelanja = daftarbelanjaan.sum()
+    val adalahMember = true
+    if (adalahMember == true && totalBelanja > 100000){
+        println(" total belanja awal : $totalBelanja , total diskon : ${totalBelanja - 20000} ")
 
+    }else{
+        println("total belanja awal : $totalBelanja")
+    }
 
 }
-
-// TULIS DEKLARASI CONST VAL UNTUK SOAL 3 DI SINI
